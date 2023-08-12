@@ -1,0 +1,92 @@
+/* Body */
+#body {
+    background-color: #F5F5F5;
+}
+
+
+
+
+/* Search div  */
+.searchFilterDiv {
+    background-color: #fff;
+    margin:4rem;
+    padding: 0.5rem;
+    border: 0.01rem solid rgb(233, 231, 231);
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px #848484;
+}
+.searchFilterDiv button {
+    background-color: #A084E8;
+    border-color: #fff;
+}
+.searchFilterDiv button :hover{
+    background-color: #ab96e1;
+}
+
+.searchBarDiv {
+    padding: 2rem;
+    margin: auto;
+}
+
+.searchBarDiv h1{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.searchBarBtn {
+    float: right;
+    
+}
+
+.searchBarBtn input {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.dropdownSelect {
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* Filter Bar  */
+
+.filterBarDiv {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.dropdownDivs input{
+    border-radius: 120px solid;
+}
+
+/* Card  */
+
+
+.cardDiv {
+    margin: 1rem 2rem;
+    padding: 0rem;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 2px 2px 14px #a1a1a1;
+    float:left;
+
+}
+.card-title {
+    font-family: 'Roboto Slab', serif;
+}
+
+.card-img-top {
+    height: 180px;
+    width: 300px;
+}
+
+.iconButton {
+    height: 40px;
+    width: 40px;
+    float: right;
+}
+
+.propertyIcons {
+    width: 16px;
+    height: 16px;
+}
