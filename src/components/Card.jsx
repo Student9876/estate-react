@@ -18,7 +18,7 @@ function Card(props) {
     }
     
 
-    return (<div className="card cardDiv" style={{ width: "22rem" }}>
+    return (<div className="card cardDiv">
         <img class="card-img-top" src={props.previewImage} alt="Card cap" />
         <div class="card-body">
             <img className="iconButton" onClick={toggleHeart} name={props.property_id} src={(heartToggle) ? icon2 : icon1} alt="iconButton" />

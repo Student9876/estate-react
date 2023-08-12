@@ -9,7 +9,7 @@
 /* Search div  */
 .searchFilterDiv {
     background-color: #fff;
-    margin:4rem;
+    margin:2rem;
     padding: 0.5rem;
     border: 0.01rem solid rgb(233, 231, 231);
     border-radius: 20px;
@@ -34,10 +34,10 @@
 
 .searchBarBtn {
     float: right;
-    
 }
 
 .searchBarBtn input {
+    width: 20rem;
     margin: 0.5rem;
     padding: 0.5rem;
     border: 1px solid #000;
@@ -63,6 +63,7 @@
 
 
 .cardDiv {
+    width: 22rem;
     margin: 1rem 2rem;
     padding: 0rem;
     border: 1px solid #000;
@@ -89,4 +90,14 @@
 .propertyIcons {
     width: 16px;
     height: 16px;
+}
+
+
+@media(max-width:560px){
+    .searchBarBtn input {
+        width: 12rem;
+    }
+    .cardDiv {
+        width: 18rem;   
+    }
 }

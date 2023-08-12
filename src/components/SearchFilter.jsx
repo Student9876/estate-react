@@ -117,7 +117,7 @@ function SearchFilter(props) {
                         </Col>
                         <Col>
                             <div className="searchBarBtn">
-                                <input type="text" style={{ width: "20rem" }} onChange={handleChange} name="searchInput" placeholder="Search for places" value={searchValue} />
+                                <input type="text" onChange={handleChange} name="searchInput" placeholder="Search for places" value={searchValue} />
                                 <button className="btn btn-primary" onClick={handleGo} name={searchValue}>Go</button>
                             </div>
                         </Col>
@@ -153,7 +153,7 @@ function SearchFilter(props) {
 
                             </div>
                         </Col>
-                        <Col xs={6} md={3}>
+                        <Col xs={12} md={3}>
                             <div className="dropdownDivs">
                                 <h4>Between</h4>
                                 <input type="date" name="fromDate" onChange={onDateChange}></input>
@@ -163,7 +163,7 @@ function SearchFilter(props) {
                                 <input type="date" name="toDate" onChange={onDateChange}></input>
                             </div>
                         </Col>
-                        <Col xs={6} md={3}>
+                        <Col xs={12} md={3}>
                             <div className="dropdownDivs">
                                 <h4>Price</h4>
 
