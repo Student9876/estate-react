@@ -2,23 +2,20 @@ import React, { useState } from "react";
 import { Col, Row, Container, NavDropdown } from "react-bootstrap";
 import DropdownItem from "react-bootstrap/esm/DropdownItem";
 import data3 from "../data3"
-// import {Select} from 'react-select';
 
 function SearchFilter(props) {
 
 
     // UseStates 
     const [searchValue, setSearchValue] = useState("");
-
     const [date1, setDate1] = useState('');
     const [date2, setDate2] = useState('');
-
     const [Price, setPrice] = useState({
         lPrice: "",
         hPrice: ""
     });
-
     const [area, setArea] = useState("");
+    const [cityName, setCityName] = useState("");
     const [property_type, setPropertyType] = useState("1");
 
 
@@ -75,9 +72,10 @@ function SearchFilter(props) {
 
 
     // Setting Area 
-    function addArea(event) {
-        console.log(event.target.name, typeof (event.target.name))
-        setArea(event.target.name);
+    function addArea(data) {
+        setArea(data.property_place);
+        console.log(area);
+        setCityName(data.city)
     }
 
     function dropDownChanged(event) {
@@ -136,21 +134,13 @@ function SearchFilter(props) {
                                 <h4>Location</h4>
                                 <p className="text-muted">Select a city first!</p>
                                 { }
-                                <NavDropdown>
+                                <NavDropdown title={cityName}>
                                     {data3.map(data => {
                                         return (
-                                            <DropdownItem name={data.property_place} onClick={addArea}>{data.city}</DropdownItem>
+                                            <DropdownItem name={data.property_place} onClick={e => addArea(data)}>{data.city}</DropdownItem>
                                         )
                                     })}
                                 </NavDropdown>
-                                {/* <select>
-                                    {data3.map(data => {
-                                        return (
-                                            <option name={data.property_place} onClick={addArea}>{data.city}</option>
-                                        )
-                                    })}
-                                </select> */}
-
                             </div>
                         </Col>
                         <Col xs={12} md={3}>

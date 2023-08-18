@@ -10,42 +10,76 @@ function App() {
 
     // UseStates 
     const [filteredData, setFilteredData] = useState(data);
-    // const [hearted, setHearted] = useState([]);
+
 
     function onClickFilter(parseParameters) {
         console.log(parseParameters)
-
-        var newData;
+        var newData = null;
         if (parseParameters.property_place !== "") {
-            newData = data.filter(property => {
-                return (property.property_place.toString() === parseParameters.property_place);
-            })
+            if (newData === null) {
+                newData = data.filter(property => {
+                    return (property.property_place === parseParameters.property_place);
+                })
+            }
+            else {
+                newData = newData.filter(property => {
+                    return (property.property_place === parseParameters.property_place);
+                })
+            }
         }
         if (parseParameters.Price.lPrice !== '') {
-            newData = newData.filter(property => {
-                return (Number(parseParameters.Price.lPrice) <= property.rent);
-            })
+            if (newData === null) {
+                newData = data.filter(property => {
+                    return (Number(parseParameters.Price.lPrice) <= property.rent);
+                })
+            }
+            else {
+                newData = newData.filter(property => {
+                    return (Number(parseParameters.Price.lPrice) <= property.rent);
+                })
+            }
         }
         if (parseParameters.Price.hPrice !== '') {
-            newData = newData.filter(property => {
-                return (Number(parseParameters.Price.hPrice) >= property.rent);
-            })
+            if (newData === null) {
+                newData = data.filter(property => {
+                    return (Number(parseParameters.Price.hPrice) >= property.rent);
+                })
+            }
+            else {
+                newData = newData.filter(property => {
+                    return (Number(parseParameters.Price.hPrice) >= property.rent);
+                })
+            }
         }
         if (parseParameters.property_type !== '') {
-            newData = newData.filter(property => {
-                return (Number(parseParameters.property_type) === property.property_type);
-            })
+            if (newData === null) {
+                newData = data.filter(property => {
+                    return (Number(parseParameters.property_type) === property.property_type);
+                })
+            }
+            else {
+                newData = newData.filter(property => {
+                    return (Number(parseParameters.property_type) === property.property_type);
+                })
+            }
         }
 
-        if (parseParameters.fromDate!== "") {
-            newData = newData.filter(property => {
-                return (Number(property.date_of_availability.slice(0, 4) * 365 * 24 + Number(property.date_of_availability.slice(5, 7)) * 30 * 24 + Number(property.date_of_availability.slice(8, 11)) * 24 >= parseParameters.fromDate));
-            })
+        if (parseParameters.fromDate !== "") {
+            if (newData === null) {
+                newData = data.filter(property => {
+                    return (Number(property.date_of_availability.slice(0, 4) * 365 * 24 + Number(property.date_of_availability.slice(5, 7)) * 30 * 24 + Number(property.date_of_availability.slice(8, 11)) * 24 >= parseParameters.fromDate));
+                })
+            }
+            else {
+                newData = newData.filter(property => {
+                    return (Number(property.date_of_availability.slice(0, 4) * 365 * 24 + Number(property.date_of_availability.slice(5, 7)) * 30 * 24 + Number(property.date_of_availability.slice(8, 11)) * 24 >= parseParameters.fromDate));
+                })
+            }
 
         }
+
         setFilteredData(newData);
     }
-
 
     function onClickSearch(searchString) {
         if (searchString !== "") {
@@ -56,36 +90,8 @@ function App() {
         }
     }
 
-    // Functions to render liked properties 
-    // function onHeart(property_id){
-    //     setHearted(prevValue =>{
-    //         return [...prevValue , property_id];
-    //     })
-    // }
-
-
-    // function inHeart(property_id){
-    //     var val=0;
-    //     data.forEach(property=>{
-    //         if(property.property_id === property_id){
-    //             val=1;
-    //             return val;
-    //         }
-
-    //     })
-    //     return val;
-    // }
-
-    // function renderLiked(){
-    //     const newData = data.map(property=>{
-    //         return inHeart(property.property_id)
-            
-    //     })
-    //     setFilteredData(newData);
-    // }
-
     return <>
-        <NavbarComponent 
+        <NavbarComponent
         />
         <SearchFilter
             onClickFilter={onClickFilter}
