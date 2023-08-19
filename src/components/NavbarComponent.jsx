@@ -17,7 +17,7 @@ function NavbarComponent() {
 
                             {/* Navbar dropdowns  */}
                             <NavDropdown bg='dark' variant='dark' title='Manage Property' id='basic-nav-dropdown' disabled>
-                                <Dropdown.Item >View Liked properties</Dropdown.Item>
+                                <Dropdown.Item>Liked Properties</Dropdown.Item>
                             </NavDropdown>
                             <NavDropdown bg='dark' variant='dark' title='Resources' id='basic-nav-dropdown' disabled>
                             </NavDropdown>

@@ -132,8 +132,6 @@ function SearchFilter(props) {
                         <Col xs={6} md={3}>
                             <div className="dropdownDivs">
                                 <h4>Location</h4>
-                                <p className="text-muted">Select a city first!</p>
-                                { }
                                 <NavDropdown title={cityName}>
                                     {data3.map(data => {
                                         return (
@@ -163,14 +161,13 @@ function SearchFilter(props) {
 
                             </div>
                         </Col>
-                        <Col xs={6} md={3}>
+                        <Col xs={12} md={4} lg={3}>
                             <div className="dropdownDivs">
                                 <h4>Property Type</h4>
-                                {(property_type === "1") ? "House" : (property_type === "2") ? "Room" : "Car"}
+                                {(property_type === "1") ? "House" : (property_type === "2") ? "Land" : "Car"}
                                 <NavDropdown>
                                     <DropdownItem onClick={dropDownChanged} name="1">House</DropdownItem>
-                                    <DropdownItem onClick={dropDownChanged} name="2">Rooms</DropdownItem>
-                                    <DropdownItem onClick={dropDownChanged} name="3">Car</DropdownItem>
+                                    <DropdownItem onClick={dropDownChanged} name="2">Land</DropdownItem>
                                 </NavDropdown>
 
                             </div>

@@ -10,7 +10,7 @@ function App() {
 
     // UseStates 
     const [filteredData, setFilteredData] = useState(data);
-
+    // const [hearted, setHearted] = useState([]);
 
     function onClickFilter(parseParameters) {
         console.log(parseParameters)
@@ -90,8 +90,30 @@ function App() {
         }
     }
 
+
+    // function onHeart(property_id) {
+    //     if(property_id !== 'delete'){
+
+    //         setHearted(prev_property_ids => {
+    //             return [...prev_property_ids, property_id]
+    //         })
+    //     }else {
+
+    //     }
+    //     console.log(hearted);
+    // }
+
+
+    // function renderLikedProperties(){
+    //     const newData = data.filter(property=>{
+    //         return (hearted.includes(toString(property.property_id)));
+    //     })
+    //     setFilteredData(newData);
+    // }
+
     return <>
         <NavbarComponent
+        // renderLikedProperties={renderLikedProperties}
         />
         <SearchFilter
             onClickFilter={onClickFilter}
@@ -107,10 +129,12 @@ function App() {
                                 title={property.title}
                                 address={property.address}
                                 rent={property.rent}
+                                date={property.date_of_availability}
                                 bed={property.bed}
                                 bath={property.bath}
                                 dimension={property.dimension}
                                 property_id={property.property_id}
+                                property_type={property.property_type}
                             />
                         </Col>
                     )
