@@ -1,6 +1,5 @@
 # Estate-React
 
-![Estate-React Logo](link-to-your-logo-image)
 
 Estate-React is a powerful and flexible property listing application built with React. It provides an easy-to-use interface for browsing, sorting, and filtering real estate properties. With over 50 example property details included, users can quickly find properties that match their criteria using a four-level sorting mechanism: location, price (minimum and maximum), available date, and property type.
 
@@ -62,28 +61,3 @@ Estate-React allows users to sort properties using a four-level sorting mechanis
 ### Example Properties
 
 Explore the example properties included in the application to get a feel for the available features and data. Each property detail includes essential information such as location, price, available date, and property type.
-
-## Contributing
-
-We welcome contributions to improve Estate-React! To contribute:
-
-1. **Fork the repository**.
-2. **Create a new branch**:
-    ```bash
-    git checkout -b feature/your-feature-name
-    ```
-3. **Commit your changes**:
-    ```bash
-    git commit -m 'Add some feature'
-    ```
-4. **Push to the branch**:
-    ```bash
-    git push origin feature/your-feature-name
-    ```
-5. **Create a Pull Request**.
-
----
-
-Happy house hunting with Estate-React! 🌟
-
-![Footer Image](link-to-your-footer-image)
