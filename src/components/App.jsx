@@ -81,7 +81,7 @@ function App() {
         setFilteredData(newData);
     }
 
-    function onClickSearch(searchString) {
+    function onClickSearch(searchString){
         if (searchString !== "") {
             const newData = data.filter(property => {
                 return (searchString.toLowerCase() === property.city.toLowerCase());
